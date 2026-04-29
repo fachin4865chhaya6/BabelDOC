@@ -81,7 +81,8 @@ testpaths = ["tests"]
 asyncio_mode = "auto"
 # Removed --cov flags so a plain `pytest` run doesn't require pytest-cov
 # -p no:warnings added to suppress noisy deprecation warnings during local dev
-addopts = "-v -p no:warnings"
+# -x added so the test suite stops on the first failure (faster feedback loop)
+addopts = "-v -p no:warnings -x"
 
 [tool.coverage.run]
 source = ["babeldoc"]
